@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import '../styles/Child.css';
 
-const ColourSelector = (props) => {
-  const { config, selectNextBackground } = props
-  const { background } = config;
-  return (
-    <button className={/* classname should come here */} onClick={() => selectNextBackground({background: background})}>
-      {/* label should come here */}
-    </button>
-  )
-}
-export default ColourSelector;
+const Selection = ({applyColor}) => {
+    const [bg, setbg] = useState({background : ''});
+    
+    return (
+        <div className="fix-box" style={bg} onClick={()=>applyColor(setbg)}>
+            <h2 className="subheading">Selection</h2>
+        </div>
+    );
+};
+
+export default Selection;
