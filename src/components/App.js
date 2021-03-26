@@ -45,6 +45,7 @@ const App = () => {
             <Selection key={key} applyColor={applyColor} />
           ))
         }
+        <h1>rfghnjj</h1>
       </div>
     </div >
   )
